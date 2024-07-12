@@ -1,8 +1,13 @@
 import React, { useRef, useState } from "react";
 
 /* 
-useRef doesnt need to re-render the component unlike useState renders when the state variable changes 
-useRef is a React Hook that lets you reference a value that’s not needed for rendering.
+-> useRef doesnt need to re-render the component unlike useState renders when the state variable changes 
+-> useRef is a React Hook that lets you reference a value that’s not needed for rendering.
+-> Changing a ref does not trigger a re-render. This means refs are perfect for storing information that doesn’t affect 
+the visual output of your component. For example, if you need to store an interval ID and retrieve it later, you can 
+put it in a ref. To update the value inside the ref, you need to manually change its current property\
+-> Changing a ref does not trigger a re-render, so refs are not appropriate for storing information you want to 
+display on the screen. Use state for that instead. 
 */
 
 function Ref() {
